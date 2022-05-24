@@ -1,0 +1,44 @@
+.errorWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: hsl(200, 15%, 8%);
+  flex-direction: column;
+  text-align: center;
+}
+
+.errorWrapper.dark {
+  color: #fff;
+}
+
+.errorWrapper .message {
+  font-size: 5em;
+  font-weight: 800;
+  margin-top: 100px;
+  line-height: 110%;
+}
+
+.errorWrapper .information {
+  color: hsl(0, 0%, 52%);
+  font-size: 1.4em;
+  line-height: 120%;
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .errorWrapper .message {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-top: 100px;
+    line-height: 110%;
+  }
+
+  .errorWrapper .information {
+    color: hsl(0, 0%, 52%);
+    font-size: 1em;
+    line-height: 120%;
+    margin-top: 12px;
+  }
+}
