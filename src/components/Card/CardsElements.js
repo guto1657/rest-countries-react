@@ -17,7 +17,7 @@ export const Picture = styled.img`
   display: block;
   width: 100%;
   height: 160px;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
 
   @media (max-width: 768px) {
@@ -27,7 +27,7 @@ export const Picture = styled.img`
 
 export const ContentWrapper = styled.div`
   width: 100%;
-  padding: 30px 30px 30px 30px;
+  padding: 30px 30px 50px 30px;
   background: ${({ dark }) => (dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)')};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 0 0 10px 10px;
@@ -44,6 +44,7 @@ export const Title = styled.h3`
   margin-bottom: 10px;
   text-transform: capitalize;
   font-size: 1em;
+  font-weight: 800;
 `;
 
 export const PopulationText = styled.span`

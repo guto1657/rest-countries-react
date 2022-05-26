@@ -50,7 +50,7 @@ export const Picture = styled.img`
   display: block;
   width: 100%;
   height: 350px;
-  object-fit: fill;
+  object-fit: cover;
 
   @media screen and (max-width: 480px) {
     height: 250px;
@@ -78,7 +78,7 @@ export const InfoData = styled.span`
   font-size: 1em;
   display: block;
   margin-bottom: 7px;
-  opacity: 0.6;
+  opacity: 0.8;
 `;
 
 export const BordersWrapper = styled.div`

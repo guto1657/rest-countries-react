@@ -8,10 +8,10 @@ export const CardsWrapper = ({ children }) => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   width: 100%;
   margin-top: 50px;
-  gap: 35px;
+  gap: 50px;
 
   @media screen and (max-width: 768px) {
     width: 80%;
