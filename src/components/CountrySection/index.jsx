@@ -24,6 +24,7 @@ import { useAppContext } from '../../contexts/AppContext';
 
 export const CountrySection = ({ params }) => {
   const [appState, actions] = useAppContext();
+  const { darkMode, allCountries } = appState;
 
   const {
     name = {},
@@ -41,10 +42,10 @@ export const CountrySection = ({ params }) => {
   let borderItems = [];
 
   if (params) {
-    Object.keys(appState.allCountries).map((c) => {
+    Object.keys(allCountries).map((c) => {
       for (let i = 0; i < borders.length; i++) {
-        if (borders[i] === appState.allCountries[c].cca3) {
-          borderItems[i] = appState.allCountries[c];
+        if (borders[i] === allCountries[c].cca3) {
+          borderItems[i] = allCountries[c];
         }
       }
     });
@@ -108,7 +109,7 @@ export const CountrySection = ({ params }) => {
                 {Object?.keys(languages)?.map((item, i) => (
                   <InfoData key={i}>
                     {`${languages[item]} `}
-                    {Object.keys(languages).length > 1 &&
+                    {Object.keys(languages).length > 0 &&
                     languages[item] != languages[Object.keys(languages)[Object.keys(languages).length - 1]]
                       ? `, `
                       : ''}

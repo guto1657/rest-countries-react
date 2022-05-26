@@ -32,7 +32,11 @@ export const CountryPage = () => {
         {countryItem.length > 0 ? (
           <CountrySection params={countryItem} />
         ) : (
-          <ErrorMessage message={'Error'} information="the Country you were looking for does not exist" />
+          <ErrorMessage
+            message={'Error'}
+            information="the Country you were looking for does not exist"
+            hasButton={true}
+          />
         )}
       </div>
     </main>

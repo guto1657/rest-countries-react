@@ -5,7 +5,7 @@ import { SearchField } from '../../components/SearchField';
 import { SelectField } from '../../components/SelectField';
 import { useAppContext } from '../../contexts/AppContext';
 import './styles.css';
-import { selectOptions } from './selectOptions';
+import { selectOptions } from '../../helpers/selectOptions';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { ErrorMessage } from '../../components/ErrorMessage';
 

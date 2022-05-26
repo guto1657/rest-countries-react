@@ -50,7 +50,7 @@ export const Picture = styled.img`
   display: block;
   width: 100%;
   height: 350px;
-  object-fit: cover;
+  object-fit: fill;
 
   @media screen and (max-width: 480px) {
     height: 250px;
@@ -65,6 +65,7 @@ export const CountryName = styled.h1`
 
 export const InfoWrapper = styled.span`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const InfoName = styled.span`

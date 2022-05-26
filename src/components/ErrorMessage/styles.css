@@ -26,6 +26,35 @@
   line-height: 120%;
   margin-top: 12px;
 }
+.btn {
+  color: #fff;
+  background: hsl(200, 15%, 8%);
+  margin-top: 30px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: 0.3s all ease-in-out;
+}
+
+.btn:hover {
+  color: hsl(200, 15%, 8%);
+  background: transparent;
+  border: 1px solid hsl(200, 15%, 8%);
+  transition: 0.3s all ease-in-out;
+}
+
+.errorWrapper.dark .btn {
+  color: hsl(200, 15%, 8%);
+  background: #fff;
+}
+
+.errorWrapper.dark .btn:hover {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+}
 
 @media screen and (max-width: 768px) {
   .errorWrapper .message {
