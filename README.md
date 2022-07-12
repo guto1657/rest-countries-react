@@ -5,7 +5,7 @@ This project is a solution to the
 
 ## screenshot
 
-![projectScreenshot]()
+![1653575524536](https://user-images.githubusercontent.com/70277574/178499624-cd9567c0-06a6-4a6d-b00c-f80b087e26fe.png)
 
 ## The challenge
 
@@ -24,7 +24,7 @@ in this project users should be able to:
 
 ## Deploying
 
-- [Vercel](https://vercel.com/)
+- [Vercel](https://rest-countries-react-app-snowy.vercel.app/home)
 
 ## Tools and technologies used
 
