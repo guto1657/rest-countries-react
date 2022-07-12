@@ -4,7 +4,11 @@ import './styles.css';
 import P from 'prop-types';
 import { Link } from 'react-router-dom';
 
-export const ErrorMessage = ({ message, information = '', hasButton = false }) => {
+export const ErrorMessage = ({
+  message,
+  information = '',
+  hasButton = false,
+}) => {
   const [appState, actions] = useAppContext();
 
   return (

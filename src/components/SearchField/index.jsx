@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { useAppContext } from '../../contexts/AppContext';
-import { SearchFieldWrapper, SearchIcon, SearchPlaceholder } from './SearchFieldElements';
+import {
+  SearchFieldWrapper,
+  SearchIcon,
+  SearchPlaceholder,
+} from './SearchFieldElements';
 
 export const SearchField = () => {
   const [appState, actions] = useAppContext();

@@ -10,14 +10,20 @@ export const AppContextProvider = ({ children }) => {
   const [appState, dispatch] = useReducer(reducer, initialState);
   const actions = useRef(buildActions(dispatch));
 
-  return <Context.Provider value={[appState, actions.current]}>{children}</Context.Provider>;
+  return (
+    <Context.Provider value={[appState, actions.current]}>
+      {children}
+    </Context.Provider>
+  );
 };
 
 export const useAppContext = () => {
   const context = useContext(Context);
 
   if (typeof context === 'undefined') {
-    throw new Error("you have to use 'UseAppContext' inside <AppContextProvider/>");
+    throw new Error(
+      "you have to use 'UseAppContext' inside <AppContextProvider/>",
+    );
   }
 
   return [...context];

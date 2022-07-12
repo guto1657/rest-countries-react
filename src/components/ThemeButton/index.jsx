@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react';
-import { ButtonWrapper, MoonIcon, ButtonName, FillMoonIcon } from './ThemeButtonElements';
+import {
+  ButtonWrapper,
+  MoonIcon,
+  ButtonName,
+  FillMoonIcon,
+} from './ThemeButtonElements';
 
 import P from 'prop-types';
 import { useAppContext } from '../../contexts/AppContext';
@@ -19,7 +24,10 @@ export const ThemeButton = ({ name }) => {
   }
 
   return (
-    <ButtonWrapper onClick={() => actions.switchTheme()} dark={darkMode ? 1 : 0}>
+    <ButtonWrapper
+      onClick={() => actions.switchTheme()}
+      dark={darkMode ? 1 : 0}
+    >
       {darkMode ? <FillMoonIcon /> : <MoonIcon />}
       <ButtonName>{name}</ButtonName>
     </ButtonWrapper>

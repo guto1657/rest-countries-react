@@ -19,6 +19,7 @@ import {
   BorderLink,
   BorderListItem,
 } from './countrySectionElements';
+import * as styled from './countrySectionElements';
 import { ErrorMessage } from '../ErrorMessage';
 import { useAppContext } from '../../contexts/AppContext';
 
@@ -63,7 +64,9 @@ export const CountrySection = ({ params }) => {
           <Picture src={flags?.png} />
         </Colum_1>
         <Colum_2>
-          <CountryName dark={appState.darkMode ? 1 : 0}>{name?.common}</CountryName>
+          <CountryName dark={appState.darkMode ? 1 : 0}>
+            {name?.common}
+          </CountryName>
           <Row>
             <Col_2 dark={appState.darkMode ? 1 : 0}>
               <InfoWrapper>
@@ -98,7 +101,12 @@ export const CountrySection = ({ params }) => {
                   <InfoData key={i}>
                     {`${currencies[item].name} `}
                     {Object.keys(currencies).length > 1 &&
-                    currencies[item] != currencies[Object.keys(currencies)[Object.keys(currencies).length - 1]]
+                    currencies[item] !=
+                      currencies[
+                        Object.keys(currencies)[
+                          Object.keys(currencies).length - 1
+                        ]
+                      ]
                       ? `, `
                       : ''}
                   </InfoData>
@@ -110,7 +118,12 @@ export const CountrySection = ({ params }) => {
                   <InfoData key={i}>
                     {`${languages[item]} `}
                     {Object.keys(languages).length > 0 &&
-                    languages[item] != languages[Object.keys(languages)[Object.keys(languages).length - 1]]
+                    languages[item] !=
+                      languages[
+                        Object.keys(languages)[
+                          Object.keys(languages).length - 1
+                        ]
+                      ]
                       ? `, `
                       : ''}
                   </InfoData>
@@ -120,10 +133,15 @@ export const CountrySection = ({ params }) => {
           </Row>
           <BordersWrapper>
             <BordersList>
-              <BorderTitle dark={appState.darkMode ? 1 : 0}>Border Countries:</BorderTitle>
+              <BorderTitle dark={appState.darkMode ? 1 : 0}>
+                Border Countries:
+              </BorderTitle>
               {borderItems?.map((b, i) => (
                 <BorderListItem key={i} big={borderItems.length >= 4 ? 1 : 0}>
-                  <BorderLink dark={appState.darkMode ? 1 : 0} to={`../country/${b.cca3}`}>
+                  <BorderLink
+                    dark={appState.darkMode ? 1 : 0}
+                    to={`../country/${b.cca3}`}
+                  >
                     {b.name.common}
                   </BorderLink>
                 </BorderListItem>

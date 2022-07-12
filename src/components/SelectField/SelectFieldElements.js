@@ -22,7 +22,8 @@ export const SelectHeader = styled.div`
 
   transition: all 0.2s linear;
 
-  background: ${({ dark }) => (dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 98%)')};
+  background: ${({ dark }) =>
+    dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 98%)'};
   color: ${({ dark }) => (dark ? '#fff' : '#000')};
 
   @media (max-width: 480px) {
@@ -53,7 +54,8 @@ export const DropdownList = styled.ul`
   border-radius: 8px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
 
-  background: ${({ dark }) => (dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 98%)')};
+  background: ${({ dark }) =>
+    dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 98%)'};
   color: ${({ dark }) => (dark ? '#fff' : '#000')};
   z-index: 9999;
 `;

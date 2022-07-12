@@ -11,15 +11,26 @@ import { ErrorMessage } from '../../components/ErrorMessage';
 
 export const HomePage = () => {
   const [appState, actions] = useAppContext();
-  const { allCountries, searchValue, selectFilter, loading, hasError, errorMessage } = appState;
+  const {
+    allCountries,
+    searchValue,
+    selectFilter,
+    loading,
+    hasError,
+    errorMessage,
+  } = appState;
   const isMounted = useRef(true);
 
   let filteredCountries =
-    selectFilter !== null ? allCountries.filter((country) => country.region === selectFilter) : allCountries;
+    selectFilter !== null
+      ? allCountries.filter((country) => country.region === selectFilter)
+      : allCountries;
 
   filteredCountries =
     searchValue !== ''
-      ? filteredCountries.filter((country) => country.name.common.toLowerCase().includes(searchValue.toLowerCase()))
+      ? filteredCountries.filter((country) =>
+          country.name.common.toLowerCase().includes(searchValue.toLowerCase()),
+        )
       : filteredCountries;
 
   useEffect(() => {
@@ -37,7 +48,12 @@ export const HomePage = () => {
   }
 
   if (hasError) {
-    return <ErrorMessage message={'Error! :('} information={`Additional information: ${appState.errorMessage}`} />;
+    return (
+      <ErrorMessage
+        message={'Error! :('}
+        information={`Additional information: ${appState.errorMessage}`}
+      />
+    );
   }
 
   return (
@@ -48,7 +64,9 @@ export const HomePage = () => {
           <SelectField title={'Filter by Region'} options={selectOptions} />
         </div>
         {filteredCountries.length <= 0 && !loading && (
-          <ErrorMessage message={'No countries or regions have been found :('} />
+          <ErrorMessage
+            message={'No countries or regions have been found :('}
+          />
         )}
 
         {!!filteredCountries.length && (

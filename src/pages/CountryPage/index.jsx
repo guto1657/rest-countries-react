@@ -8,8 +8,17 @@ import { useAppContext } from '../../contexts/AppContext';
 export const CountryPage = () => {
   const [appState, actions] = useAppContext();
   const params = useParams();
-  const { allCountries, searchValue, selectFilter, loading, hasError, errorMessage } = appState;
-  const countryItem = appState.allCountries?.filter((c) => c.cca3 == params.countryId);
+  const {
+    allCountries,
+    searchValue,
+    selectFilter,
+    loading,
+    hasError,
+    errorMessage,
+  } = appState;
+  const countryItem = appState.allCountries?.filter(
+    (c) => c.cca3 == params.countryId,
+  );
   const isMounted = useRef(true);
 
   useEffect(() => {

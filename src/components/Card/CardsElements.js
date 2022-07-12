@@ -28,7 +28,8 @@ export const Picture = styled.img`
 export const ContentWrapper = styled.div`
   width: 100%;
   padding: 30px 30px 50px 30px;
-  background: ${({ dark }) => (dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)')};
+  background: ${({ dark }) =>
+    dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 0 0 10px 10px;
   color: ${({ dark }) => (dark ? '#fff' : 'hsl(200, 15%, 8%)')};

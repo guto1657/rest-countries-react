@@ -11,23 +11,24 @@ a {
   text-decoration: none;
 }
 
-ul,ol {
+ul,
+ol {
   list-style: none;
 }
 
 body {
   background: hsl(0, 0%, 98%);
-  transition: background .2s linear;
+  transition: background 0.2s linear;
 }
 
 body.dark {
   background: hsl(207, 26%, 17%);
-  transition: background .2s linear;
+  transition: background 0.2s linear;
 }
 
 main {
   max-width: 100%;
-  padding: 0 calc(((100vw - 1168px) / 2 ));
+  padding: 0 calc(((100vw - 1168px) / 2));
   margin: 0 auto;
 }
 
@@ -36,7 +37,7 @@ main {
   margin-bottom: 5%;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   main {
     padding: 0 30px;
   }

@@ -21,7 +21,8 @@ export const Btn = styled(Link)`
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
   border-radius: 7px;
   color: ${({ dark }) => (dark ? '#fff' : 'hsl(200, 15%, 8%)')};
-  background: ${({ dark }) => (dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)')};
+  background: ${({ dark }) =>
+    dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'};
   font-weight: 600;
   text-transform: capitalize;
 `;
@@ -125,7 +126,8 @@ export const BorderListItem = styled.li`
 export const BorderLink = styled(Link)`
   color: ${({ dark }) => (dark ? '#fff' : 'hsl(200, 15%, 8%)')};
   padding: 4px 16px;
-  background: ${({ dark }) => (dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)')};
+  background: ${({ dark }) =>
+    dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'};
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 300;

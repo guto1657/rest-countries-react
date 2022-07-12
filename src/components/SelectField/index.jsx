@@ -40,7 +40,10 @@ export const SelectField = ({ title = '', options = [] }) => {
         <DropdownList dark={darkMode ? 1 : 0}>
           {options.length &&
             options.map((option, index) => (
-              <ListItem key={index} onClick={() => onOptionClicked(option.value)}>
+              <ListItem
+                key={index}
+                onClick={() => onOptionClicked(option.value)}
+              >
                 {option.name}
               </ListItem>
             ))}

@@ -8,9 +8,15 @@ export async function loadCountries(dispatch) {
 
     const dataJson = await dataRaw.json();
 
-    dispatch({ type: ActionTypes.ASYNC_GET_COUNTRIES_DATA_END, payload: dataJson });
+    dispatch({
+      type: ActionTypes.ASYNC_GET_COUNTRIES_DATA_END,
+      payload: dataJson,
+    });
   } catch (e) {
-    dispatch({ type: ActionTypes.ASYNC_GET_COUNTRIES_DATA_ERROR, payload: e.message });
+    dispatch({
+      type: ActionTypes.ASYNC_GET_COUNTRIES_DATA_ERROR,
+      payload: e.message,
+    });
     throw new Error('new Error: ' + e.message);
   }
 }

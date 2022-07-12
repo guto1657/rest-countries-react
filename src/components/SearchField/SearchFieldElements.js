@@ -21,7 +21,8 @@ export const SearchPlaceholder = styled.input`
 
   transition: all 0.2s linear;
 
-  background: ${({ dark }) => (dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 98%)')};
+  background: ${({ dark }) =>
+    dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 98%)'};
   color: ${({ dark }) => (dark ? 'hsl(0, 0%, 98%)' : 'hsl(0, 0%, 52%)')};
 
   &::placeholder {

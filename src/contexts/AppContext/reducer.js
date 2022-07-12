@@ -7,11 +7,22 @@ export const reducer = (state, action) => {
     }
 
     case ActionTypes.ASYNC_GET_COUNTRIES_DATA_END: {
-      return { ...state, allCountries: action.payload, loading: false, hasError: false, errorMessage: '' };
+      return {
+        ...state,
+        allCountries: action.payload,
+        loading: false,
+        hasError: false,
+        errorMessage: '',
+      };
     }
 
     case ActionTypes.ASYNC_GET_COUNTRIES_DATA_ERROR: {
-      return { ...state, loading: false, hasError: true, errorMessage: action.payload };
+      return {
+        ...state,
+        loading: false,
+        hasError: true,
+        errorMessage: action.payload,
+      };
     }
 
     case ActionTypes.UPDATE_SEARCH_VALUE: {
@@ -23,7 +34,9 @@ export const reducer = (state, action) => {
     }
 
     case ActionTypes.SWITCH_THEME: {
-      state.darkMode ? localStorage.setItem('theme', 'light') : localStorage.setItem('theme', 'dark');
+      state.darkMode
+        ? localStorage.setItem('theme', 'light')
+        : localStorage.setItem('theme', 'dark');
 
       return { ...state, darkMode: !state.darkMode };
     }
