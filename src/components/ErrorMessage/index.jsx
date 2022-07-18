@@ -1,8 +1,13 @@
 import React from 'react';
 import { useAppContext } from '../../contexts/AppContext';
-import './styles.css';
 import P from 'prop-types';
 import { Link } from 'react-router-dom';
+import {
+  ErrorWrapper,
+  Information,
+  Message,
+  Button,
+} from './ErrorMessageElements';
 
 export const ErrorMessage = ({
   message,
@@ -12,15 +17,11 @@ export const ErrorMessage = ({
   const [appState, actions] = useAppContext();
 
   return (
-    <div className={`errorWrapper ${appState.darkMode ? 'dark' : ''}`}>
-      <h1 className="message">{message}</h1>
-      <p className="information">{information}</p>
-      {hasButton && (
-        <Link className="btn" to="/home">
-          go to homepage
-        </Link>
-      )}
-    </div>
+    <ErrorWrapper className={appState.darkMode ? 'dark' : ''}>
+      <Message>{message}</Message>
+      <Information>{information}</Information>
+      {hasButton && <Button to="/home">go to homepage</Button>}
+    </ErrorWrapper>
   );
 };
 

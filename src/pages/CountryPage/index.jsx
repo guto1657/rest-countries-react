@@ -4,6 +4,7 @@ import { CountrySection } from '../../components/CountrySection';
 import { ErrorMessage } from '../../components/ErrorMessage';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { useAppContext } from '../../contexts/AppContext';
+import { Container, Main } from './styles.js';
 
 export const CountryPage = () => {
   const [appState, actions] = useAppContext();
@@ -36,8 +37,8 @@ export const CountryPage = () => {
   }
 
   return (
-    <main>
-      <div className="container">
+    <Main>
+      <Container>
         {countryItem.length > 0 ? (
           <CountrySection params={countryItem} />
         ) : (
@@ -47,7 +48,7 @@ export const CountryPage = () => {
             hasButton={true}
           />
         )}
-      </div>
-    </main>
+      </Container>
+    </Main>
   );
 };

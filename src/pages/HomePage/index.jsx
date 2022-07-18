@@ -4,10 +4,10 @@ import { CardsWrapper } from '../../components/CardsWrapper';
 import { SearchField } from '../../components/SearchField';
 import { SelectField } from '../../components/SelectField';
 import { useAppContext } from '../../contexts/AppContext';
-import './styles.css';
 import { selectOptions } from '../../helpers/selectOptions';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { ErrorMessage } from '../../components/ErrorMessage';
+import { SearchContainer, Main, Container } from './styles';
 
 export const HomePage = () => {
   const [appState, actions] = useAppContext();
@@ -57,12 +57,12 @@ export const HomePage = () => {
   }
 
   return (
-    <main>
-      <div className="container">
-        <div className="heading">
+    <Main>
+      <Container>
+        <SearchContainer>
           <SearchField />
           <SelectField title={'Filter by Region'} options={selectOptions} />
-        </div>
+        </SearchContainer>
         {filteredCountries.length <= 0 && !loading && (
           <ErrorMessage
             message={'No countries or regions have been found :('}
@@ -84,7 +84,7 @@ export const HomePage = () => {
             ))}
           </CardsWrapper>
         )}
-      </div>
-    </main>
+      </Container>
+    </Main>
   );
 };
